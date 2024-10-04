@@ -7,5 +7,6 @@ import App from './App';
 import {name as appName} from './app.json';
 import Employees from './src/BottomTab/Employees/Employees';
 import Departments from './src/BottomTab/Departments';
+import SplashScreen from './src/SplashScreen';
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => SplashScreen);
