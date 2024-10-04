@@ -1,42 +1,42 @@
-import { View, Text, StatusBar ,Platform, Dimensions, Image, FlatList} from 'react-native'
+import { View, Text, StatusBar ,Platform, Dimensions, Image, FlatList, TouchableOpacity} from 'react-native'
 import React from 'react'
 
 import { SafeAreaView } from 'react-native-safe-area-context'
-import CustomTitle from '../Components/CustomTitle'
-import CustomSearch from '../Components/CustomSearch'
+import CustomTitle from '../../Components/CustomTitle'
+import CustomSearch from '../../Components/CustomSearch'
 
 const {height,width} = Dimensions.get('window')
-const Employees = () => {
+const Employees = ({navigation}) => {
   const EmployeeData =[
     {
       id:'1',
       name:'Rinsa Shajahan',
       role:'UI/UX Designer',
-      image:require('../../assets/images/rinsa.png')
+      image:require('../../../assets/images/rinsa.png')
     },
     {
       id:'2',
       name:'Alsina Ashraf',
       role:'Creative Designer',
-      image:require('../../assets/images/alsina.png')
+      image:require('../../../assets/images/alsina.png')
     },
     {
       id:'3',
       name:'Sheethal Joy',
       role:'Backend Developer',
-      image:require('../../assets/images/sheethal.png')
+      image:require('../../../assets/images/sheethal.png')
     },
     {
       id:'4',
       name:'Sherna Latheef',
       role:'Frontend Developer',
-      image:require('../../assets/images/sherna.png')
+      image:require('../../../assets/images/sherna.png')
     },
     {
       id:'5',
       name:'Anagha K',
       role:'Graphic Designer',
-      image:require('../../assets/images/anagha.png')
+      image:require('../../../assets/images/anagha.png')
     }
   ]
   const colors =['#387D7A66','#61387D66','#7D383866','#7D7C3866','#44387D66']
@@ -63,7 +63,9 @@ const Employees = () => {
           fontSize: width*0.06,
           fontWeight:'600'
         }}>Find</Text>
-        <Image source={require('../../assets/icons/addperson.png')}/>
+       <TouchableOpacity onPress={() => navigation.navigate('AddEmployee')}>
+       <Image source={require('../../../assets/icons/addperson.png')} />
+       </TouchableOpacity>
       </View>
       <View>
         <CustomSearch/>

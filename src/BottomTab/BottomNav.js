@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Text, View ,TouchableOpacity,Image,StyleSheet, Dimensions} from 'react-native'
 import Departments from './Departments';
 import DashBoard from './DashBoard/DashBoard';
-import Employees from './Employees';
+import Employees from './Employees/Employees';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const iconSize = width * 0.09;
 const {height,width} =Dimensions.get('window')

@@ -5,6 +5,7 @@ import { Text, View } from 'react-native'
 import LoginScreen from './src/Login';
 import BottomNav from './src/BottomTab/BottomNav';
 import DashBoard from './src/BottomTab/DashBoard/DashBoard';
+import AddEmployee from './src/BottomTab/Employees/AddEmployee';
 
 const Stack= createStackNavigator();
 const App =() =>{
@@ -15,6 +16,7 @@ const App =() =>{
       }}>
         <Stack.Screen name='Login' component={LoginScreen}/>
         <Stack.Screen name='BottomNav' component={BottomNav}/>
+        <Stack.Screen name='AddEmployee' component={AddEmployee}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

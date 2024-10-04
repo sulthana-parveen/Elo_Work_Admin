@@ -97,8 +97,8 @@ const Departments = () => {
                     <Image
                       source={item.icon}
                       style={{
-                        height: height * 0.055,
-                        width: width * 0.12,
+                        height: height * 0.05,
+                        width: width * 0.1,
                       }}
                     />
                   </View>

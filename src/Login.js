@@ -7,7 +7,10 @@ const { width, height } = Dimensions.get('window');
 const LoginScreen = ({navigation}) => {
   return (
    
-      <SafeAreaView style={{ backgroundColor: 'black', flex: 1 }}>
+      <SafeAreaView style={{ 
+        backgroundColor: 'black', flex: 1 ,
+        paddingHorizontal: width * 0.04,
+        paddingTop: Platform.OS === 'android' ? height*0.02 : height * 0.02,}}>
         <StatusBar backgroundColor='black' />
          <CustomTitle
          title='Login'

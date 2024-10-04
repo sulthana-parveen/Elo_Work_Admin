@@ -2,8 +2,8 @@ import { View, Text ,Dimensions,Image} from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 const { width, height } = Dimensions.get('window'); 
-const CustomTitle = (props) => {
-    const {title} = props;
+const CustomTitle = ({title,navigation}) => {
+    //const {title} = props;
   return (
     <View>
      <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
@@ -16,7 +16,7 @@ const CustomTitle = (props) => {
             justifyContent: 'center',
             //marginRight: width * 0.02
           }}>
-           <Icon name='arrow-back-ios' size={width*0.06} color='white'/>
+           <Icon name='arrow-back-ios' size={width*0.06} color='white' onPress={() =>navigation.goBack()}/>
           </View>
           <Text
             style={{
