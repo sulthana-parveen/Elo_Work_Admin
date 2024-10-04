@@ -8,15 +8,15 @@ const {height,width} =Dimensions.get('window');
 const DashBoard =() => {
   return (
     <SafeAreaView style={{
-      backgroundColor: 'black',
+      backgroundColor: '#1C1C1E',
       flex: 1,
       paddingHorizontal: width * 0.04,
       paddingTop: Platform.OS === 'android' ? height*0.02 : height * 0.02,
     }}>
         <StatusBar
-        backgroundColor='black'
+        backgroundColor='#1C1C1E'
         />
-       <ScrollView>
+      
        <View style={{
             flexDirection:'row',
             justifyContent:'space-between',
@@ -64,9 +64,10 @@ const DashBoard =() => {
         </View>
      <View>
         <AttendenceData width={width} height={height}/>
+       
         <TaskCategories width={width} height={height}/>
      </View>
-       </ScrollView>
+      
         
     </SafeAreaView>
   )

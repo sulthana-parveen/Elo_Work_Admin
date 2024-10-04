@@ -1,4 +1,4 @@
-import { View, Text, TouchableHighlight, Image } from 'react-native'
+import { View, Text, TouchableHighlight, Image, ScrollView } from 'react-native'
 import React from 'react'
 import { FlatList } from 'react-native-gesture-handler'
 import { AnimatedCircularProgress } from 'react-native-circular-progress'
@@ -64,6 +64,7 @@ const TaskCategories = ({height,width}) => {
         paddingHorizontal:width*0.015,
         marginVertical:height*0.03
        }}>
+       
        <View style={{
             backgroundColor:'#2C2C2E',
             height:height*0.04,
@@ -116,6 +117,7 @@ const TaskCategories = ({height,width}) => {
         )}
         renderItem={({item}) => {
           return(
+            <ScrollView>
             <View style={{
               backgroundColor:'#2C2C2E',
               borderRadius:width*0.05
@@ -209,6 +211,7 @@ const TaskCategories = ({height,width}) => {
              </View>
            </View>
             </View>
+            </ScrollView>
           )
         }}/>
 

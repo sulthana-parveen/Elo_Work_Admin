@@ -6,9 +6,9 @@ const CustomTitle = (props) => {
     const {title} = props;
   return (
     <View>
-     <View style={{ flexDirection: 'row', alignItems: 'center', padding: width * 0.04 }}>
+     <View style={{ flexDirection: 'row', alignItems: 'center',  }}>
           <View style={{
-            backgroundColor: '#636875',
+          //  backgroundColor: '#636875',
             height: height * 0.035,
             width: height * 0.035,
             borderRadius: (height * 0.035) /2,
@@ -16,7 +16,7 @@ const CustomTitle = (props) => {
             justifyContent: 'center',
             //marginRight: width * 0.02
           }}>
-           <Icon name='arrow-back-ios' size={width*0.045} color='white'/>
+           <Icon name='arrow-back-ios' size={width*0.06} color='white'/>
           </View>
           <Text
             style={{

@@ -43,10 +43,10 @@ const Employees = () => {
   const lineColors = ['#30BEB6','#8913BB','#7D3838','#7C7D38','#383F7D']
   return (
     <SafeAreaView style={{
-      backgroundColor: 'black',
+      backgroundColor: '#1C1C1E',
       flex: 1,
       paddingHorizontal: width * 0.04,
-      paddingTop: Platform.OS === 'android' ? height*0.02 : height * 0.02,
+      paddingTop: Platform.OS === 'android' ? height*0.002 : height * 0.0002,
     }}>
       <StatusBar backgroundColor='black'/>
       <CustomTitle
@@ -54,12 +54,13 @@ const Employees = () => {
       <View style={{
         flexDirection:'row',
         justifyContent:'space-between',
-        paddingHorizontal:width*0.045
+       paddingHorizontal:width*0.01,
+       marginTop:height*0.013
       }}>
         <Text style={{
           color:'white',
           fontFamily:'Ubuntu-Medium',
-          fontSize: width*0.05,
+          fontSize: width*0.06,
           fontWeight:'600'
         }}>Find</Text>
         <Image source={require('../../assets/icons/addperson.png')}/>
@@ -68,7 +69,7 @@ const Employees = () => {
         <CustomSearch/>
       </View>
       <View style={{
-        paddingHorizontal:height*0.02
+       // paddingHorizontal:height*0.02
       }}>
         <FlatList
         data={EmployeeData}
@@ -78,7 +79,7 @@ const Employees = () => {
             <View style={{
               backgroundColor:colors[index % colors.length],
               marginVertical:height*0.01,
-              height:height*0.078,
+              height:height*0.085,
               padding:height*0.01,
               borderRadius:height*0.013,
               borderLeftWidth:width*0.02,
@@ -94,12 +95,12 @@ const Employees = () => {
                   <Text style={{
                     fontFamily:'Ubuntu-Regular',
                     color:'white',
-                    fontSize:width*0.04
+                    fontSize:width*0.045
                   }}>{item.name}</Text>
                   <Text style={{
                     fontFamily:'Ubuntu-Regular',
                     color:'#828484',
-                    fontSize:width*0.035
+                    fontSize:width*0.04
                   }}>{item.role}</Text>
                  </View>
                  <Image source={item.image}/>

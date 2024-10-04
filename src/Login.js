@@ -102,7 +102,7 @@ const LoginScreen = ({navigation}) => {
         </View>
         <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: height * 0.02 }}>
           <TouchableOpacity 
-          onPress={() => navigation.navigate('Dashboard')}
+          onPress={() => navigation.navigate('BottomNav')}
           style={{
             backgroundColor: '#30BE82',
             width: width*0.827,

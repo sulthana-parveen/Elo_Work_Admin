@@ -6,7 +6,7 @@ const {height,width} =Dimensions.get('window')
 const CustomSearch = () => {
   return (
     <View style={{
-        paddingHorizontal:width*0.045,
+       // paddingHorizontal:width*0.045,
         paddingVertical:height*0.02
     }}>
     <Searchbar
@@ -22,7 +22,7 @@ const CustomSearch = () => {
     style={{
         backgroundColor:'#252836',
         height:height*0.045,
-        width:width*0.83,
+        width:width*0.91,
         alignItems:'center',
         justifyContent:'center'
     }}
