@@ -44,9 +44,7 @@ const AttendenceData = ({height,width}) => {
      <FlatList
      data={data}
      numColumns={2}
-     style={{
-    
-     }}
+     keyExtractor={(item) => item.id.toString()} 
      renderItem={({item}) => {
         return(
             <View style={{

@@ -1,8 +1,8 @@
-import { View, Text, Platform, StatusBar, Image, Dimensions } from 'react-native'
+import { View, Text, Platform, StatusBar, Image, Dimensions, ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
-import AttendenceData from '../Components/AttendenceData';
-import TaskCategories from '../Components/TaskCategories';
+import AttendenceData from './components/AttendenceData';
+import TaskCategories from './components/TaskCategories';
 
 const {height,width} =Dimensions.get('window');
 const DashBoard =() => {
@@ -16,13 +16,14 @@ const DashBoard =() => {
         <StatusBar
         backgroundColor='black'
         />
-        <View style={{
+       <ScrollView>
+       <View style={{
             flexDirection:'row',
             justifyContent:'space-between',
             
         }}>
-            <Image source={require('../../assets/icons/menu.png')}/>
-            <Image source={require('../../assets/icons/Notification.png')}/>
+            <Image source={require('../../../assets/icons/menu.png')}/>
+            <Image source={require('../../../assets/icons/Notification.png')}/>
 
         </View>
         <View style={{
@@ -36,7 +37,7 @@ const DashBoard =() => {
             fontFamily:'Ubuntu-Regular',
             color:'#FFFBFB'
          }}>Hi Admin! </Text>
-         <Image source={require('../../assets/icons/WavingHand.png')} style={{
+         <Image source={require('../../../assets/icons/WavingHand.png')} style={{
             width:width*0.07,
             height:height*0.03
          }}/>
@@ -65,6 +66,7 @@ const DashBoard =() => {
         <AttendenceData width={width} height={height}/>
         <TaskCategories width={width} height={height}/>
      </View>
+       </ScrollView>
         
     </SafeAreaView>
   )

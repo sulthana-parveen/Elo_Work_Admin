@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, StatusBar, Text, View, TouchableOpacity, SafeAreaView, Dimensions } from 'react-native';
 import { TextInput, Provider as PaperProvider } from 'react-native-paper';
+import CustomTitle from './Components/CustomTitle';
 
 const { width, height } = Dimensions.get('window'); 
 const LoginScreen = ({navigation}) => {
@@ -8,30 +9,9 @@ const LoginScreen = ({navigation}) => {
    
       <SafeAreaView style={{ backgroundColor: 'black', flex: 1 }}>
         <StatusBar backgroundColor='black' />
-        <View style={{ flexDirection: 'row', alignItems: 'center', padding: width * 0.04 }}>
-          <View style={{
-            backgroundColor: '#636875',
-            height: height * 0.03,
-            width: height * 0.03,
-            borderRadius: height * 0.015,
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginRight: width * 0.02
-          }}>
-            <Image source={require('../assets/icons/Vector.png')} style={{ width: height * 0.012, height: height * 0.02 }} />
-          </View>
-          <Text
-            style={{
-              fontSize: height * 0.025,
-              color: 'white',
-              position: 'absolute',
-              left: 0,
-              right: 0,
-              textAlign: 'center',
-              fontFamily: 'Ubuntu-Medium',
-              fontWeight: '600'
-            }}>Login</Text>
-        </View>
+         <CustomTitle
+         title='Login'
+         />
         <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: height * 0.02 }}>
           <Image source={require('../assets/images/logo.png')} />
           <Text style={{

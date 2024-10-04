@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import LoginScreen from './src/Login';
 import BottomNav from './src/BottomTab/BottomNav';
-import DashBoard from './src/BottomTab/DashBoard';
+import DashBoard from './src/BottomTab/DashBoard/DashBoard';
 
 const Stack= createStackNavigator();
 const App =() =>{

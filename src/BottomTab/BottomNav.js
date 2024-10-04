@@ -2,7 +2,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import Departments from './Departments';
-import DashBoard from './DashBoard';
+import DashBoard from './DashBoard/DashBoard';
 import Employees from './Employees';
 
 const BottomTab = createMaterialBottomTabNavigator();
