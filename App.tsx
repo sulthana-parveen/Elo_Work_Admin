@@ -6,6 +6,7 @@ import LoginScreen from './src/Login';
 import BottomNav from './src/BottomTab/BottomNav';
 import DashBoard from './src/BottomTab/DashBoard/DashBoard';
 import AddEmployee from './src/BottomTab/Employees/AddEmployee';
+import SplashScreen from './src/SplashScreen';
 
 const Stack= createStackNavigator();
 const App =() =>{
@@ -14,9 +15,11 @@ const App =() =>{
       <Stack.Navigator screenOptions={{
         headerShown:false
       }}>
-        <Stack.Screen name='Login' component={LoginScreen}/>
+         <Stack.Screen name='SplashScreen' component={SplashScreen}/>
+        <Stack.Screen name='LoginScreen' component={LoginScreen}/>
         <Stack.Screen name='BottomNav' component={BottomNav}/>
         <Stack.Screen name='AddEmployee' component={AddEmployee}/>
+       
       </Stack.Navigator>
     </NavigationContainer>
   )

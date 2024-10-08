@@ -48,7 +48,7 @@ const Employees = ({navigation}) => {
       paddingHorizontal: width * 0.04,
       paddingTop: Platform.OS === 'android' ? height*0.002 : height * 0.0002,
     }}>
-      <StatusBar backgroundColor='black'/>
+      <StatusBar backgroundColor='#1C1C1E'/>
       <CustomTitle
       title='Employees'/>
       <View style={{

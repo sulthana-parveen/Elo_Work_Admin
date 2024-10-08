@@ -1,8 +1,15 @@
 import { View, Text, Image, StatusBar, Dimensions } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigation } from '@react-navigation/native'
 
 const {height,width} = Dimensions.get('window')
 const SplashScreen = () => {
+  const navigation = useNavigation();
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('LoginScreen');
+    },3000)
+  },[navigation])
   return (
     <View style={{
         justifyContent:'center',
